@@ -1,0 +1,110 @@
+*{
+    box-sizing:border-box;
+
+}
+
+body{
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+}
+
+h1{
+   text-align: center;
+   margin-top: 15%;
+   font-family: sans-serif;
+   color:#01040a;
+   font-size: 300%;
+    
+}
+
+
+p.counter-preview{
+    text-align: center;
+    font-size: 500%;
+    font-family:sans-serif;
+    margin:10px;
+}
+
+
+div#allbtns{
+    text-align: center;
+   
+}
+
+#decrement{
+    transition-duration: 0.15s;
+    background-color: red;
+    font-size: 150%;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color:white;
+    border: 0px;
+    padding:8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+
+#decrement:hover{
+    background-color: maroon;
+    
+
+}
+
+#decrement:active{
+    font-size:120%;
+    box-shadow: 0px 2px 2px 2px cyan;
+    text-shadow: 2px 2px 2px black;
+}
+
+#increment{
+    transition-duration: 0.15s;
+    background-color: #24ff57;
+    font-size: 150%;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color:white;
+    border: 0px;
+    padding:8px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+#increment:hover{
+    background-color:green;
+}
+
+#increment:active{
+    font-size:120%;
+    box-shadow: 0px 2px 2px 2px cyan;
+    text-shadow: 2px 2px 2px black;
+}
+
+#reset{
+    transition-duration: 0.15s;
+    background-color: darkgray;
+    font-size: 150%;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color:white;
+    border: 0px;
+    padding:8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#reset:hover{
+    background-color: gray;
+}
+
+#reset:active{
+    font-size:120%;
+    box-shadow: 0px 2px 2px 2px cyan;
+    text-shadow: 2px 2px 2px black;
+}
