@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightslategrey;
+
+}
+
+h1#header{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    color:coral;
+    text-align:center;
+    
+}
+
+div#container{
+    text-align: center;
+}
+
+canvas#game{
+    width:1024px;
+    height:576px;
+    
+
+}
