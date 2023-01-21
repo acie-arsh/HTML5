@@ -1,4 +1,4 @@
-#Building a 2-D Platformer game
+#Building a 2-D Platformer game#
 
 Day 11 : 
 -Added a canvas and a placeholder rectangle as a player.
