@@ -7,3 +7,7 @@ Day 11 :
 Day 12 :  
 -Implemented Object-Oriented Programming.  
 -Simulated Gravity.  
+
+Day 13 :  
+-Implemented Player movement.  
+
