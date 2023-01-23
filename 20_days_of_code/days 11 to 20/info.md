@@ -11,3 +11,7 @@ Day 12 :
 Day 13 :  
 -Implemented Player movement.  
 
+Day 14 :  
+-Implemented Sprite class
+-Gave the platformer a background
+
