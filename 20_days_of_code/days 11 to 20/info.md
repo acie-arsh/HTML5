@@ -15,3 +15,6 @@ Day 14 :
 -Implemented Sprite class
 -Gave the platformer a background
 
+Day 15 :  
+-Implemented Collision blocks
+
