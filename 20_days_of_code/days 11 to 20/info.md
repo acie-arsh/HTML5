@@ -12,9 +12,12 @@ Day 13 :
 -Implemented Player movement.  
 
 Day 14 :  
--Implemented Sprite class
--Gave the platformer a background
+-Implemented Sprite class.  
+-Gave the platformer a background.
 
 Day 15 :  
--Implemented Collision blocks
+-Implemented Collision blocks.  
+
+Day 16 :  
+-Implemented Collision detection.
 
