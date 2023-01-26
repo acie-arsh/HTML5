@@ -19,5 +19,11 @@ Day 15 :
 -Implemented Collision blocks.  
 
 Day 16 :  
--Implemented Collision detection.
+-Implemented Collision detection.  
+
+Day 17 :  
+-Implemented Sprite animations for the player model  
+-Implemented a hitbox that accurately detects collisions with respect to the sprite.  
+
+
 
