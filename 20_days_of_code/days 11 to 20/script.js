@@ -70,6 +70,9 @@ const player = new Player({
     },
     collisionBlocks,
     
+    imageSrc: './img/warrior/Idle.png',
+    frameRate: 8,
+    
     
 });
 
