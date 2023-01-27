@@ -25,5 +25,8 @@ Day 17 :
 -Implemented Sprite animations for the player model  
 -Implemented a hitbox that accurately detects collisions with respect to the sprite.  
 
+Day 18 :  
+-Completed movement animations which are reactive to the last direction of the player model.
+
 
 
