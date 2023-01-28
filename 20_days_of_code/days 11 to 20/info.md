@@ -28,5 +28,8 @@ Day 17 :
 Day 18 :  
 -Completed movement animations which are reactive to the last direction of the player model.
 
+Day 19 :  
+-Added camera panning and world borders
+
 
 
