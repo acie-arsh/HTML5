@@ -49,6 +49,7 @@ platformCollisions2D.forEach((row, y) => {
                         x:x*16,
                         y:y*16
                     },
+                    height: 4,
                 })
             )
         }
@@ -56,7 +57,7 @@ platformCollisions2D.forEach((row, y) => {
 })
 
 
-const gravity = 0.5;
+const gravity = 0.1;
 
 
 
@@ -65,10 +66,11 @@ const gravity = 0.5;
 
 const player = new Player({
     position : {
-        x:0, 
-        y:0,
+        x:100, 
+        y:300,
     },
     collisionBlocks,
+    platformCollisionBlocks,
     
     imageSrc: './img/warrior/Idle.png',
     frameRate: 8,
@@ -77,7 +79,7 @@ const player = new Player({
         Idle: {
             imageSrc: './img/warrior/Idle.png',
             frameRate: 8,
-            frameBuffer: 15,
+            frameBuffer: 7,
         },
         IdleLeft: {
             imageSrc: './img/warrior/IdleLeft.png',
@@ -87,12 +89,12 @@ const player = new Player({
         Run: {
             imageSrc: './img/warrior/Run.png',
             frameRate: 8,
-            frameBuffer: 10,
+            frameBuffer: 5,
         },
         RunLeft: {
             imageSrc: './img/warrior/RunLeft.png',
             frameRate: 8,
-            frameBuffer: 10,
+            frameBuffer: 5,
         },
         Jump: {
             imageSrc: './img/warrior/Jump.png',
@@ -132,6 +134,13 @@ const background = new Sprite({
     imageSrc : './img/background.png',
 })
 
+const camera = {
+    position : {
+        x:0,
+        y: -432 + scaledCanvas.height,
+    }
+}
+
 function animate(){
     window.requestAnimationFrame(animate);
     c.fillStyle = "white";
@@ -139,18 +148,19 @@ function animate(){
     
     c.save()
     c.scale(4,4)
-    c.translate(0, -background.image.height + scaledCanvas.height);
+    c.translate(camera.position.x, camera.position.y);
     background.update()
     
-    collisionBlocks.forEach((CollisionBlock) => {
-        CollisionBlock.update()
-    })
+    // collisionBlocks.forEach((CollisionBlock) => {
+    //     CollisionBlock.update()
+    // })
 
-    platformCollisionBlocks.forEach((block) => {
-        block.update()
-    })
+    // platformCollisionBlocks.forEach((block) => {
+    //     block.update()
+    // })
 
 
+    
     player.update();
     
 
@@ -159,11 +169,13 @@ function animate(){
         player.lastDirection = 'right'
         player.switchSprite('Run')
         player.velocity.x = 1.5;
+        player.shouldPanCameraToTheLeft({ canvas, camera });
     }
     else if(keys.a.pressed) {
         player.lastDirection = 'left'
         player.switchSprite('RunLeft')
         player.velocity.x = -1.5;
+        player.shouldPanCameraToTheRight({ canvas, camera })
     }
     
     else if(player.velocity.y === 0) {
@@ -172,10 +184,12 @@ function animate(){
     }
 
     if(player.velocity.y < 0) {
+        player.shouldPanCameraDown({ canvas, camera });
         if(player.lastDirection === 'right')player.switchSprite('Jump');
         else player.switchSprite('JumpLeft')
     }
         else if(player.velocity.y > 0) {
+            player.shouldPanCameraUp({ canvas, camera });
             if(player.lastDirection === 'right') player.switchSprite('Fall')
             else player.switchSprite('FallLeft')
     };
@@ -212,7 +226,7 @@ window.addEventListener('keydown', (event) =>{
             break
 
         case 'w':
-        player.velocity.y = -8
+        player.velocity.y = -4
             break
     }
 
