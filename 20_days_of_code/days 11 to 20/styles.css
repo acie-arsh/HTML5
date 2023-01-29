@@ -24,3 +24,31 @@ canvas#game{
     
 
 }
+
+div#startButtonDiv{
+    position:absolute;
+    top: 50%;
+    left: 43%;
+
+}
+
+#startButton{
+    transition-duration: 200ms;
+    font-size: 250%;
+    background-color: darkorange;
+    font-family: sans-serif;
+    border-radius: 10px;
+
+
+}
+
+#startButton:hover{
+    background-color:orange;
+
+}
+
+#startButton:active{
+    background-color:gray;
+    box-shadow: 0px 2px 2px 2px black;
+
+}

@@ -5,6 +5,8 @@ console.log(c);
 canvas.width = 1024;
 canvas.height = 576;
 
+const startButtonEl = document.querySelector('#startButton')
+const startButtonDiv = document.querySelector('#startButtonDiv')
 const scaledCanvas = {
     width : canvas.width/4,
     height : canvas.height/4,
@@ -213,7 +215,12 @@ const keys = {
 }
 
 
-animate()
+
+
+startButtonEl.addEventListener('click' , () => {
+    animate()
+    startButtonDiv.style.display = 'none'
+})
 
 window.addEventListener('keydown', (event) =>{
     switch(event.key){
